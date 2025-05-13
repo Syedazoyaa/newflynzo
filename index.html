@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flynzoe</title>
+    <meta name="description" content="Flynzoe: Premier digital marketing agency offering SEO, social media, web design, and more to elevate your brand.">
+    <meta name="keywords" content="digital marketing, SEO, social media marketing, web design, branding, Flynzoe">
+    <title>Flynzoe - Digital Marketing Agency</title>
     <link rel="icon" href="assets/images/icon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <canvas id="bgCanvas"></canvas>
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <!-- Header -->
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo animate__animated animate__fadeIn">
+            <a href="index.html" class="logo" aria-label="Flynzoe Home">
                 <img src="assets/images/logo.jpg" alt="Flynzoe Logo" class="logo-img">
             </a>
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Main Navigation">
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
                     <li class="nav-item dropdown">
@@ -34,13 +32,16 @@
                             <li><a href="services.html#branding">Branding</a></li>
                             <li><a href="services.html#email">Email Marketing</a></li>
                             <li><a href="services.html#content">Content Marketing</a></li>
+                            <li><a href="services.html#web-design">Web Design</a></li>
+                            <li><a href="services.html#graphic-design">Graphic Design</a></li>
+                            <li><a href="services.html#video-marketing">Video Marketing</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
                 </ul>
-                <a href="about.html#contact" class="cta-btn header-cta">Get Consultation</a>
-                <div class="hamburger">
+                <a href="about.html#contact" class="cta-btn header-cta" aria-label="Get Consultation">Get Consultation</a>
+                <div class="hamburger" aria-label="Toggle Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -48,8 +49,6 @@
             </nav>
         </div>
     </header>
-
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-video">
             <video autoplay muted loop playsinline>
@@ -58,69 +57,76 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="container">
-            <div class="hero-content animate__animated animate__fadeInUp">
-                <h1>Empower Your Brand with Flynzoe's Digital Intelligence</h1>
-                <p class="subtext">Smart strategies, creative content, and data-driven results.</p>
-                <a href="about.html#contact" class="cta-btn">Get a Free Consultation</a>
+            <div class="hero-content">
+                <h1 class="animate">Empower Your Brand with Digital Intelligence</h1>
+                <p class="subtext animate">Smart strategies, creative content, and data-driven results.</p>
+                <a href="about.html#contact" class="cta-btn animate" aria-label="Get a Free Consultation">Get a Free Consultation</a>
             </div>
         </div>
     </section>
-
-    <!-- Services Section -->
     <section class="services-section">
         <div class="container">
-            <h2 class="section-title animate__animated animate__fadeIn">Our Digital Marketing Services</h2>
+            <h2 class="section-title animate">Our Digital Marketing Services</h2>
             <div class="services-grid">
-                <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-icon"><i class="fas fa-hashtag"></i></div>
+                <div class="service-card animate">
+                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
                     <h3>Social Media Marketing</h3>
                     <p>Strategic campaigns to grow your audience and engagement.</p>
-                    <a href="services.html#social" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="service-details">
+                        <p>Boost engagement with targeted campaigns across platforms like Instagram, LinkedIn, and TikTok.</p>
+                    </div>
                 </div>
-                <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <div class="service-card animate">
                     <div class="service-icon"><i class="fas fa-search"></i></div>
                     <h3>Search Engine Optimization</h3>
                     <p>Boost your rankings and drive organic traffic.</p>
-                    <a href="services.html#seo" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="service-details">
+                        <p>Optimize for high-intent keywords and improve site speed for top rankings.</p>
+                    </div>
                 </div>
-                <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                <div class="service-card animate">
                     <div class="service-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Analytics & Reporting</h3>
                     <p>Data-driven insights to optimize your strategy.</p>
-                    <a href="services.html#analytics" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="service-details">
+                        <p>Real-time analytics to track performance and ROI.</p>
+                    </div>
                 </div>
-                <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                <div class="service-card animate">
                     <div class="service-icon"><i class="fas fa-palette"></i></div>
                     <h3>Branding Strategy</h3>
                     <p>Craft a compelling brand identity.</p>
-                    <a href="services.html#branding" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="service-details">
+                        <p>Create a memorable brand with consistent visuals and messaging.</p>
+                    </div>
                 </div>
-                <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                <div class="service-card animate">
                     <div class="service-icon"><i class="fas fa-envelope"></i></div>
                     <h3>Email Marketing</h3>
                     <p>Convert leads with targeted campaigns.</p>
-                    <a href="services.html#email" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="service-details">
+                        <p>Personalized emails to nurture leads and drive sales.</p>
+                    </div>
                 </div>
-                <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+                <div class="service-card animate">
+                    <div class="service-icon"><i class="fas fa-file-alt"></i></div>
                     <h3>Content Marketing</h3>
                     <p>Attract customers with valuable content.</p>
-                    <a href="services.html#content" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="service-details">
+                        <p>Engaging blogs, videos, and infographics to build authority.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Industries Section -->
     <section class="industries-section">
         <div class="container">
             <div class="industries-content">
-                <div class="industries-text animate__animated animate__fadeInLeft">
-                    <h2>EMPOWERING EVERY INDUSTRY TO SOAR</h2>
-                        <br>Real results, no fluff—just strategies that fit your space</h2>
-                    </h2>
+                <div class="industries-text animate">
+                    <h2>Empowering Every Industry to Soar</h2>
+                    <p>Real results, no fluff—just strategies that fit your space.</p>
                 </div>
-                <div class="industries-logos animate__animated animate__fadeInRight">
+                <div class="industries-logos animate">
                     <div class="logo-container">
                         <i class="fas fa-shopping-cart industry-logo" title="Retail"></i>
                         <i class="fas fa-heartbeat industry-logo" title="Healthcare"></i>
@@ -133,8 +139,29 @@
             </div>
         </div>
     </section>
-
-    <!-- Why Choose Us Section -->
+    <section class="flynzoe-best-section">
+        <div class="container">
+            <h2 class="section-title animate">Why Flynzoe Excels in Digital Marketing</h2>
+            <div class="stats-grid">
+                <div class="stat animate">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Clients Served</div>
+                </div>
+                <div class="stat animate">
+                    <div class="stat-number" data-target="95">0</div>
+                    <div class="stat-label">Client Satisfaction (%)</div>
+                </div>
+                <div class="stat animate">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                <div class="stat animate">
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="why-choose-us parallax-section">
         <div class="video-bg">
             <video autoplay muted loop playsinline>
@@ -144,48 +171,46 @@
         <div class="parallax-overlay"></div>
         <div class="container">
             <div class="why-choose-content">
-                <h2 class="section-title animate__animated animate__fadeIn">WHY CHOOSE FLYNZOE</h2>
+                <h2 class="section-title animate">Why Choose Flynzoe</h2>
                 <div class="reasons-grid">
-                    <div class="reason animate__animated animate__fadeInLeft">
+                    <div class="reason animate">
                         <div class="reason-number">01</div>
                         <h3>Custom Strategies</h3>
-                        <p>Tailored solutions designed specifically for your business goals.</p>
+                        <p>Tailored solutions designed for your business goals.</p>
                     </div>
-                    <div class="reason animate__animated animate__fadeInLeft" data-wow-delay="0.1s">
+                    <div class="reason animate">
                         <div class="reason-number">02</div>
                         <h3>Transparent Analytics</h3>
                         <p>Real-time reporting with clear metrics.</p>
                     </div>
-                    <div class="reason animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+                    <div class="reason animate">
                         <div class="reason-number">03</div>
                         <h3>Dedicated Team</h3>
                         <p>Your success is our priority with a dedicated team.</p>
                     </div>
-                    <div class="reason animate__animated animate__fadeInLeft" data-wow-delay="0.3s">
+                    <div class="reason animate">
                         <div class="reason-number">04</div>
                         <h3>Proven Results</h3>
-                        <p>We deliver measurable growth and tangible outcomes.</p>
+                        <p>Measurable growth and tangible outcomes.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="footer-logo">
+                    <a href="index.html" class="footer-logo" aria-label="Flynzoe Home">
                         <img src="assets/images/logo2.jpg" alt="Flynzoe Logo">
                     </a>
-                    <p>Elevating your digital presence with smart strategies.</p>
+                    <p>Elevating your digital presence with innovative strategies.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -214,12 +239,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

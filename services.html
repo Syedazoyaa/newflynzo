@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Flynzoe's digital marketing services: SEO, social media, web design, graphic design, video marketing, and more.">
+    <meta name="keywords" content="digital marketing services, SEO, social media, web design, graphic design, video marketing, Flynzoe">
     <title>Our Services | Flynzoe</title>
+    <link rel="icon" href="assets/images/icon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <canvas id="bgCanvas"></canvas>
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <!-- Header -->
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo animate__animated animate__fadeIn">
+            <a href="index.html" class="logo" aria-label="Flynzoe Home">
                 <img src="assets/images/logo.jpg" alt="Flynzoe Logo" class="logo-img">
             </a>
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Main Navigation">
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item dropdown">
@@ -33,13 +32,16 @@
                             <li><a href="#branding">Branding</a></li>
                             <li><a href="#email">Email Marketing</a></li>
                             <li><a href="#content">Content Marketing</a></li>
+                            <li><a href="#web-design">Web Design</a></li>
+                            <li><a href="#graphic-design">Graphic Design</a></li>
+                            <li><a href="#video-marketing">Video Marketing</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
                 </ul>
-                <a href="about.html#contact" class="cta-btn header-cta">Get Consultation</a>
-                <div class="hamburger">
+                <a href="about.html#contact" class="cta-btn header-cta" aria-label="Get Consultation">Get Consultation</a>
+                <div class="hamburger" aria-label="Toggle Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -47,8 +49,6 @@
             </nav>
         </div>
     </header>
-
-    <!-- Services Hero -->
     <section class="services-hero">
         <div class="video-bg">
             <video autoplay muted loop playsinline>
@@ -57,66 +57,151 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="container">
-            <div class="hero-content animate__animated animate__fadeInUp">
-                <h1>One-size-fits-all services limit growth. We unlock potential through personalization.</h1>
-                <p class="subtext">Strategies made to match your momentum....</p>
-                <a href="about.html#contact" class="cta-btn">Get Started Today</a>
+            <div class="hero-content">
+                <h1 class="animate">Personalized Services to Unlock Your Potential</h1>
+                <p class="subtext animate">Strategies tailored to your business goals.</p>
+                <a href="about.html#contact" class="cta-btn animate" aria-label="Get Started">Get Started Today</a>
             </div>
         </div>
     </section>
-
-    <!-- Services Grid -->
     <section class="services-section">
         <div class="container">
-            <h2 class="section-title animate__animated animate__fadeIn">Explore Our Services</h2>
+            <h2 class="section-title animate">Explore Our Services</h2>
             <div class="services-grid">
-                <div class="service-card animate__animated animate__fadeInUp" id="social" data-wow-delay="0.1s">
-                    <div class="service-icon"><i class="fas fa-hashtag"></i></div>
+                <div class="service-card animate" id="social">
+                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
                     <h3>Social Media Marketing</h3>
                     <p>Strategic campaigns to grow your audience and engagement.</p>
+                    <div class="service-details">
+                        <p>Engage audiences on platforms like Instagram, LinkedIn, and TikTok with targeted campaigns and authentic content.</p>
+                        <ul>
+                            <li>Content creation and scheduling</li>
+                            <li>Paid social ads</li>
+                            <li>Community management</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="service-card animate__animated animate__fadeInUp" id="seo" data-wow-delay="0.2s">
+                <div class="service-card animate" id="seo">
                     <div class="service-icon"><i class="fas fa-search"></i></div>
                     <h3>Search Engine Optimization</h3>
                     <p>Boost your rankings and drive organic traffic.</p>
+                    <div class="service-details">
+                        <p>Optimize your website with keyword research, technical SEO, and high-quality content.</p>
+                        <ul>
+                            <li>On-page and off-page SEO</li>
+                            <li>Local SEO</li>
+                            <li>Voice search optimization</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="service-card animate__animated animate__fadeInUp" id="analytics" data-wow-delay="0.3s">
+                <div class="service-card animate" id="analytics">
                     <div class="service-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Analytics & Reporting</h3>
                     <p>Data-driven insights to optimize your strategy.</p>
+                    <div class="service-details">
+                        <p>Track performance with real-time analytics and detailed reports.</p>
+                        <ul>
+                            <li>Google Analytics setup</li>
+                            <li>Campaign performance tracking</li>
+                            <li>ROI analysis</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="service-card animate__animated animate__fadeInUp" id="branding" data-wow-delay="0.4s">
+                <div class="service-card animate" id="branding">
                     <div class="service-icon"><i class="fas fa-palette"></i></div>
                     <h3>Branding Strategy</h3>
                     <p>Craft a compelling brand identity.</p>
+                    <div class="service-details">
+                        <p>Develop a consistent brand with logos, messaging, and visual identity.</p>
+                        <ul>
+                            <li>Logo design</li>
+                            <li>Brand guidelines</li>
+                            <li>Storytelling</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="service-card animate__animated animate__fadeInUp" id="email" data-wow-delay="0.5s">
+                <div class="service-card animate" id="email">
                     <div class="service-icon"><i class="fas fa-envelope"></i></div>
                     <h3>Email Marketing</h3>
                     <p>Convert leads with targeted campaigns.</p>
+                    <div class="service-details">
+                        <p>Design personalized email campaigns to nurture leads and drive sales.</p>
+                        <ul>
+                            <li>Automated email flows</li>
+                            <li>Segmentation</li>
+                            <li>A/B testing</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="service-card animate__animated animate__fadeInUp" id="content" data-wow-delay="0.6s">
-                    <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+                <div class="service-card animate" id="content">
+                    <div class="service-icon"><i class="fas fa-file-alt"></i></div>
                     <h3>Content Marketing</h3>
                     <p>Attract customers with valuable content.</p>
+                    <div class="service-details">
+                        <p>Create engaging blogs, videos, and infographics to build authority.</p>
+                        <ul>
+                            <li>Blog writing</li>
+                            <li>Video production</li>
+                            <li>Infographic design</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card animate" id="web-design">
+                    <div class="service-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Web Design</h3>
+                    <p>Create stunning, user-friendly websites.</p>
+                    <div class="service-details">
+                        <p>Design responsive websites optimized for conversions and SEO.</p>
+                        <ul>
+                            <li>Custom website design</li>
+                            <li>E-commerce solutions</li>
+                            <li>UX/UI optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card animate" id="graphic-design">
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Graphic Design</h3>
+                    <p>Visuals that captivate and convert.</p>
+                    <div class="service-details">
+                        <p>Produce eye-catching graphics for digital and print media.</p>
+                        <ul>
+                            <li>Social media graphics</li>
+                            <li>Brochures and flyers</li>
+                            <li>Ad creatives</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card animate" id="video-marketing">
+                    <div class="service-icon"><i class="fas fa-video"></i></div>
+                    <h3>Video Marketing</h3>
+                    <p>Engage audiences with compelling videos.</p>
+                    <div class="service-details">
+                        <p>Create promotional videos, tutorials, and ads to boost engagement.</p>
+                        <ul>
+                            <li>Video production</li>
+                            <li>Editing and animation</li>
+                            <li>YouTube optimization</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>FLYNZOE</h3>
-                    <p>Elevating your digital presence with smart strategies.</p>
+                    <a href="index.html" class="footer-logo" aria-label="Flynzoe Home">
+                        <img src="assets/images/logo2.jpg" alt="Flynzoe Logo">
+                    </a>
+                    <p>Elevating your digital presence with innovative strategies.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -145,12 +230,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

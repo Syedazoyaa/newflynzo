@@ -401,60 +401,102 @@ a {
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     padding: 80px 0;
     color: var(--white);
+    overflow: hidden;
 }
 
 .industries-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .industries-text {
     flex: 1;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 350px;
+    animation: industriesTextIn 1s cubic-bezier(0.77,0,0.175,1) both;
 }
 
 .industries-text h2 {
     color: var(--white);
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.industries-text p {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: rgba(255,255,255,0.9);
+}
+
+@keyframes industriesTextIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .industries-logos {
-    flex: 1;
+    flex: 2;
     position: relative;
-    height: 300px;
+    height: 220px;
     overflow: hidden;
     display: flex;
-    justify-content: center;
     align-items: center;
+    min-width: 0;
 }
 
 .logo-container {
     position: absolute;
-    top: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    animation: moveLogosSlow 20s linear infinite;
+    animation: moveLogosHorizontal 20s linear infinite;
+    gap: 60px;
+    white-space: nowrap; /* Ensures logos stay in a single row */
 }
 
 .industry-logo {
-    font-size: 3.5rem;
+    font-size: 7rem;
     color: var(--white);
-    margin-bottom: 30px;
+    margin-right: 60px;
     opacity: 1;
     transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.industry-logo:last-child {
+    margin-right: 60px; /* Ensure consistent spacing */
 }
 
 .industry-logo:hover {
     transform: scale(1.2);
 }
 
-@keyframes moveLogosSlow {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100%); }
+@keyframes moveLogosHorizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move only half the width since content is doubled */
+    }
 }
 
 /* Why Choose Us */
@@ -821,8 +863,8 @@ a {
     .nav-item.dropdown:hover .dropdown-menu {
         top: auto;
     }
-    .industries-content { flex-direction: column; text-align: center; }
-    .industries-logos { height: 150px; }
+    .industries-content { flex-direction: row; text-align: center; }
+    .industries-logos { height: 200px; }
     .about-content-wrapper { flex-direction: column; }
     .hero-content h1 { font-size: 2rem; }
 }

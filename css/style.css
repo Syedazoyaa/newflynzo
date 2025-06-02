@@ -29,6 +29,7 @@ body {
     color: var(--medium-gray);
     background-color: var(--white);
     overflow-x: hidden;
+    cursor: none;
 }
 
 .container {
@@ -394,6 +395,99 @@ a {
 
 .learn-more:hover i {
     transform: translateX(5px);
+}
+
+/* Service Category Section Headings */
+.service-category {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.category-title::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Ensure services grid is centered under headings */
+.service-category .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Service Card Styling (inherits from .service-card above, but can add tweaks if needed) */
+.service-card {
+    background: linear-gradient(135deg, var(--white), #f9f9f9);
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: var(--transition);
+    width: 100%;
+    max-width: 340px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.service-card .service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    background-color: rgba(0, 161, 167, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.service-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: var(--medium-gray);
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .category-title {
+        font-size: 1.3rem;
+        padding-bottom: 6px;
+    }
+    .service-card {
+        padding: 18px 8px;
+        min-height: 180px;
+        max-width: 100%;
+    }
+    .service-category .services-grid {
+        gap: 18px;
+    }
 }
 
 /* Industries Section */
@@ -830,6 +924,53 @@ a {
     width: 100%;
     height: 100%;
     opacity: 0.3;
+}
+
+/* Custom Cursor */
+.cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: #00a1a7;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition:
+        background 0.18s cubic-bezier(.4,2,.3,1),
+        border 0.18s cubic-bezier(.4,2,.3,1),
+        mix-blend-mode 0.18s,
+        transform 0.18s cubic-bezier(.4,2,.3,1);
+    mix-blend-mode: difference;
+    will-change: transform, background, border;
+    opacity: 1;
+    border: none;
+    transform: translate(-50%, -50%);
+}
+
+.cursor.hollow {
+    background: transparent !important;
+    border: 2.5px solid #00a1a7;
+    mix-blend-mode: normal;
+}
+
+.cursor[data-theme="black"] {
+    border-color: #111 !important;
+    background: transparent !important;
+    mix-blend-mode: normal;
+}
+
+.cursor[data-theme="blue"]:not(.hollow) {
+    background: #00a1a7;
+    border: none;
+    mix-blend-mode: difference;
+}
+
+.cursor[data-theme="blue"].hollow {
+    border-color: #00a1a7 !important;
+    background: transparent !important;
+    mix-blend-mode: normal;
 }
 
 /* Media Queries */
